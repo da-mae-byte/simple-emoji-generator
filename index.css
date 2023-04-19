@@ -1,0 +1,28 @@
+#preview {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#preview span {
+    /* display: block; */
+    /* margin-top: -0.18em; */
+    line-height: 1;
+}
+
+#setting {
+    display: grid;
+    grid-template-columns: max-content max-content;
+}
+
+#setting div {
+    /* width: max-content; */
+    margin: 10px;
+}
+
+#text {
+
+}

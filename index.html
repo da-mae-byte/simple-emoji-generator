@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Simple Emoji Generator</title>
+        <link rel="stylesheet" type="text/css" href="./index.css">
+    </head>
+    <body>
+        <div id="preview"></div>
+
+        <textarea id="text" cols="30" rows="10"></textarea>
+
+        <div id="setting">
+            <div>
+                <input type="checkbox" name="body_color_enable" id="body_color_enable" checked>
+                <label for="body_color_enable">文字の色</label>
+            </div>
+
+            <div>
+                <input type="color" id="body_color">
+            </div>
+
+            <div>
+                <input type="checkbox" name="edge_enable" id="edge_enable">
+                <label for="edge_enable">文字の輪郭</label>
+            </div>
+
+            <div>
+                色：<input type="color" id="edge_color">
+                太さ：<input type="number" id="edge_width">px
+            </div>
+
+            <div>
+                <input type="checkbox" name="background_color_enable" id="background_color_enable">
+                <label for="background_color_enable">背景色</label>
+            </div>
+
+            <div>
+                <input type="color" id="background_color">
+            </div>
+        </div>
+
+        <script src="./index.js"></script>
+    </body>
+</html>
