@@ -13,6 +13,77 @@
         <textarea id="text" cols="30" rows="10"></textarea>
 
         <div id="setting">
+
+            <!----------------------------------------------------------------->
+
+            <div>
+                <label>フォント</label>
+            </div>
+
+            <div>
+                <select id="font_family">
+                    <option value="Arial">Arial</option>
+                    <option value="Arial Black">Arial Black</option>
+                    <option value="Arial unicode ms">Arial unicode ms</option>
+                    <option value="Book Antiqua">Book Antiqua</option>
+                    <option value="Century">Century</option>
+                    <option value="Century Gothic">Century Gothic</option>
+                    <option value="Comic Sans MS">Comic Sans MS</option>
+                    <option value="Courier">Courier</option>
+                    <option value="Courier New">Courier New</option>
+                    <option value="Franklin Gothic">Franklin Gothic</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Helvetica">Helvetica</option>
+                    <option value="Impact">Impact</option>
+                    <option value="Lucida Console">Lucida Console</option>
+                    <option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
+                    <option value="MS Gothic">MS Gothic</option>
+                    <option value="MS Mincho">MS Mincho</option>
+                    <option value="MS PGothic">MS PGothic</option>
+                    <option value="MS PMincho">MS PMincho</option>
+                    <option value="MS Sans Serif">MS Sans Serif</option>
+                    <option value="MS Serif">MS Serif</option>
+                    <option value="Meiryo">Meiryo</option>
+                    <option value="Palatino Linotype">Palatino Linotype</option>
+                    <option value="SimSun">SimSun</option>
+                    <option value="Sylfaen">Sylfaen</option>
+                    <option value="Tahoma">Tahoma</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Times">Times</option>
+                    <option value="Trebuchet MS">Trebuchet MS</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Yu Gothic">Yu Gothic</option>
+                    <option value="Yu Mincho">Yu Mincho</option>
+                    <option value="ヒラギノ明朝 ProN W3">ヒラギノ明朝 ProN W3</option>
+                    <option value="ヒラギノ明朝 ProN W6">ヒラギノ明朝 ProN W6</option>
+                    <option value="ヒラギノ明朝 ProN">ヒラギノ明朝 ProN</option>
+                    <option value="ヒラギノ角ゴ ProN W3">ヒラギノ角ゴ ProN W3</option>
+                    <option value="ヒラギノ角ゴ ProN W6">ヒラギノ角ゴ ProN W6</option>
+                    <option value="ヒラギノ角ゴ ProN">ヒラギノ角ゴ ProN</option>
+                    <option value="メイリオ">メイリオ</option>
+                    <option value="游ゴシック">游ゴシック</option>
+                    <option value="游ゴシック体">游ゴシック体</option>
+                    <option value="游明朝">游明朝</option>
+                    <option value="游明朝体">游明朝体</option>
+                </select>
+            </div>
+
+            <!----------------------------------------------------------------->
+
+            <div>
+                <label>装飾</label>
+            </div>
+
+            <div>
+                <input type="checkbox" name="bold_enable" id="bold_enable">
+                <label for="bold_enable">太字</label>
+                <br>
+                <input type="checkbox" name="italic_enable" id="italic_enable">
+                <label for="italic_enable">斜体</label>
+            </div>
+
+            <!----------------------------------------------------------------->
+
             <div>
                 <input type="checkbox" name="body_color_enable" id="body_color_enable" checked>
                 <label for="body_color_enable">文字の色</label>
@@ -22,6 +93,8 @@
                 <input type="color" id="body_color">
             </div>
 
+            <!----------------------------------------------------------------->
+
             <div>
                 <input type="checkbox" name="edge_enable" id="edge_enable">
                 <label for="edge_enable">文字の輪郭</label>
@@ -29,8 +102,11 @@
 
             <div>
                 色：<input type="color" id="edge_color">
+                <br>
                 太さ：<input type="number" id="edge_width">px
             </div>
+
+            <!----------------------------------------------------------------->
 
             <div>
                 <input type="checkbox" name="background_color_enable" id="background_color_enable">
@@ -40,6 +116,25 @@
             <div>
                 <input type="color" id="background_color">
             </div>
+
+            <!----------------------------------------------------------------->
+
+            <div>
+                <label>余白</label>
+            </div>
+
+            <div>
+                上：<input type="number" id="padding_top">px
+                <br>
+                右：<input type="number" id="padding_right">px
+                <br>
+                左：<input type="number" id="padding_left">px
+                <br>
+                下：<input type="number" id="padding_bottom">px
+            </div>
+
+            <!----------------------------------------------------------------->
+
         </div>
 
         <script src="./index.js"></script>
