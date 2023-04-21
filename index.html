@@ -8,135 +8,348 @@
         <link rel="stylesheet" type="text/css" href="./index.css">
     </head>
     <body>
-        <div id="preview"></div>
+        <div id="main">
 
-        <textarea id="text" cols="30" rows="10"></textarea>
+            <div id="image_preview_container">
+                <h4>プレビュー（画像）</h4>
+                <div id="image_preview">
+                    <img id="emoji_image" width="100px" height="100px">
+                </div>
 
-        <div id="setting">
-
-            <!----------------------------------------------------------------->
-
-            <div>
-                <label>フォント</label>
+                <button id="download">ダウンロード</button>
             </div>
 
-            <div>
-                <select id="font_family">
-                    <option value="Arial">Arial</option>
-                    <option value="Arial Black">Arial Black</option>
-                    <option value="Arial unicode ms">Arial unicode ms</option>
-                    <option value="Book Antiqua">Book Antiqua</option>
-                    <option value="Century">Century</option>
-                    <option value="Century Gothic">Century Gothic</option>
-                    <option value="Comic Sans MS">Comic Sans MS</option>
-                    <option value="Courier">Courier</option>
-                    <option value="Courier New">Courier New</option>
-                    <option value="Franklin Gothic">Franklin Gothic</option>
-                    <option value="Georgia">Georgia</option>
-                    <option value="Helvetica">Helvetica</option>
-                    <option value="Impact">Impact</option>
-                    <option value="Lucida Console">Lucida Console</option>
-                    <option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
-                    <option value="MS Gothic">MS Gothic</option>
-                    <option value="MS Mincho">MS Mincho</option>
-                    <option value="MS PGothic">MS PGothic</option>
-                    <option value="MS PMincho">MS PMincho</option>
-                    <option value="MS Sans Serif">MS Sans Serif</option>
-                    <option value="MS Serif">MS Serif</option>
-                    <option value="Meiryo">Meiryo</option>
-                    <option value="Palatino Linotype">Palatino Linotype</option>
-                    <option value="SimSun">SimSun</option>
-                    <option value="Sylfaen">Sylfaen</option>
-                    <option value="Tahoma">Tahoma</option>
-                    <option value="Times New Roman">Times New Roman</option>
-                    <option value="Times">Times</option>
-                    <option value="Trebuchet MS">Trebuchet MS</option>
-                    <option value="Verdana">Verdana</option>
-                    <option value="Yu Gothic">Yu Gothic</option>
-                    <option value="Yu Mincho">Yu Mincho</option>
-                    <option value="ヒラギノ明朝 ProN W3">ヒラギノ明朝 ProN W3</option>
-                    <option value="ヒラギノ明朝 ProN W6">ヒラギノ明朝 ProN W6</option>
-                    <option value="ヒラギノ明朝 ProN">ヒラギノ明朝 ProN</option>
-                    <option value="ヒラギノ角ゴ ProN W3">ヒラギノ角ゴ ProN W3</option>
-                    <option value="ヒラギノ角ゴ ProN W6">ヒラギノ角ゴ ProN W6</option>
-                    <option value="ヒラギノ角ゴ ProN">ヒラギノ角ゴ ProN</option>
-                    <option value="メイリオ">メイリオ</option>
-                    <option value="游ゴシック">游ゴシック</option>
-                    <option value="游ゴシック体">游ゴシック体</option>
-                    <option value="游明朝">游明朝</option>
-                    <option value="游明朝体">游明朝体</option>
-                </select>
+            <div id="html_preview_container">
+                <h4>プレビュー（HTML）</h4>
+                <div id="html_preview"></div>
             </div>
 
-            <!----------------------------------------------------------------->
+            <div id="setting">
 
-            <div>
-                <label>装飾</label>
+                <!----------------------------------------------------------------->
+
+                <div>
+                    テキスト
+                </div>
+
+                <div>
+                    <textarea id="text" cols="30" rows="10"></textarea>
+                </div>
+
+                <!----------------------------------------------------------------->
+
+                <div>
+                    値
+                </div>
+
+                <div>
+                    <input type="number" id="font_size_coef" min="0">
+                </div>
+
+                <!----------------------------------------------------------------->
+
+                <div>
+                    <label>フォント</label>
+                </div>
+
+                <div>
+                    <select id="font_family">
+                        <option value='Windows' disabled>----Windows-----------</option>
+                        <option data-os='windows' value='Meiryo'>メイリオ</option>
+                        <option data-os='windows' value='Meiryo UI'>Meiryo UI</option>
+                        <option data-os='windows' value='Yu Gothic'>游ゴシック</option>
+                        <option data-os='windows' value='Yu Mincho'>游明朝体</option>
+                        <option data-os='windows' value='Yu Gothic UI'>Yu Gothic UI</option>
+                        <option data-os='windows' value='MS Gothic'>ＭＳ ゴシック</option>
+                        <option data-os='windows' value='MS PGothic'>ＭＳ Ｐゴシック</option>
+                        <option data-os='windows' value='MS UI Gothic'>MS UIゴシック</option>
+                        <option data-os='windows' value='MS Mincho'>MS明朝</option>
+                        <option data-os='windows' value='MS PMincho'>MS P明朝</option>
+                        <option data-os='windows' value='Arial'>Arial
+                        <option data-os='windows' value='Arial Black'>Arial Black
+                        <option data-os='windows' value='Calibri'>Calibri</option>
+                        <option data-os='windows' value='Cambria'>Cambria</option>
+                        <option data-os='windows' value='Cambria Math'>Cambria Math</option>
+                        <option data-os='windows' value='Candara'>Candara</option>
+                        <option data-os='windows' value='Consolas'>Consolas</option>
+                        <option data-os='windows' value='Comic Sans MS'>Comic Sans MS</option>
+                        <option data-os='windows' value='Constantia'>Constantia</option>
+                        <option data-os='windows' value='Corbel'>Corbel</option>
+                        <option data-os='windows' value='Courier'>Courier</option>
+                        <option data-os='windows' value='Ebrima'>Ebrima</option>
+                        <option data-os='windows' value='FixedSys'>FixedSys</option>
+                        <option data-os='windows' value='Franklin Gothic Medium'>Franklin Gothic Medium</option>
+                        <option data-os='windows' value='Gabriola'>Gabriola</option>
+                        <option data-os='windows' value='Gadugi'>Gadugi</option>
+                        <option data-os='windows' value='Georgia'>Georgia</option>
+                        <option data-os='windows' value='Impact'>Impact</option>
+                        <option data-os='windows' value='Javanese Text'>Javanese Text</option>
+                        <option data-os='windows' value='Leelawadee UI'>Leelawadee UI</option>
+                        <option data-os='windows' value='Lucida Console'>Lucida Console</option>
+                        <option data-os='windows' value='Modern'>Modern</option>
+                        <option data-os='windows' value='Mongolian Baiti'>Mongolian Baiti</option>
+                        <option data-os='windows' value='MS Sans Serif'>MS Sans Serif</option>
+                        <option data-os='windows' value='Mv Boli'>Mv Boli</option>
+                        <option data-os='windows' value='Palatino Linotype'>Palatino Linotype
+                        <option data-os='windows' value='Roman'>Roman
+                        <option data-os='windows' value='Script'>Script</option>
+                        <option data-os='windows' value='Segoe Print'>Segoe Print
+                        <option data-os='windows' value='Segoe Script'>Segoe Script</option>
+                        <option data-os='windows' value='Segoe UI'>Segoe UI</option>
+                        <option data-os='windows' value='Segoe UI Black'>Segoe UI Black</option>
+                        <option data-os='windows' value='Segoe UI Emoji'>Segoe UI Emoji</option>
+                        <option data-os='windows' value='Segoe UI Historic'>Segoe UI Historic
+                        <option data-os='windows' value='Segoe UI Symbol'>Segoe UI Symbol</option>
+                        <option data-os='windows' value='Sitka Banner'>Sitka Banner</option>
+                        <option data-os='windows' value='Sitka Display'>Sitka Display</option>
+                        <option data-os='windows' value='Sitka Heading'>Sitka Heading</option>
+                        <option data-os='windows' value='Sitka Text'>Sitka Text</option>
+                        <option data-os='windows' value='Sitka Subheading'>Sitka Subheading</option>
+                        <option data-os='windows' value='Sitka Small'>Sitka Small
+                        <option data-os='windows' value='Small Fonts'>Small Fonts
+                        <option data-os='windows' value='Sylfaen'>Sylfaen</option>
+                        <option data-os='windows' value='System'>System</option>
+                        <option data-os='windows' value='Tahoma'>Tahoma</option>
+                        <option data-os='windows' value='Times New Roman'>Times New Roman</option>
+                        <option data-os='windows' value='Trebuchet MS'>Trebuchet MS</option>
+                        <option data-os='windows' value='Terminal'>Terminal</option>
+                        <option data-os='windows' value='Verdana'>Verdana</option>
+                        <option disabled></option>
+                        <option value='Mac' disabled>----Mac---------------</option>
+                        <option data-os='mac' value='Hiragino Sans'>ヒラギノ角ゴ</option>
+                        <option data-os='mac' value='Hiragino Kaku Gothic ProN'>ヒラギノ角ゴ ProN</option>
+                        <option data-os='mac' value='Hiragino Kaku Gothic StdN'>ヒラギノ角ゴ StdN</option>
+                        <option data-os='mac' value='Hiragino Mincho ProN'>ヒラギノ明朝 ProN</option>
+                        <option data-os='mac' value='Hiragino Maru Gothic ProN'>ヒラギノ丸ゴ ProN</option>
+                        <option data-os='mac' value='klee'>クレー</option>
+                        <option data-os='mac' value='TsukuARdGothic-Regular'>筑紫A丸ゴシック</option>
+                        <option data-os='mac' value='TsukuBRdGothic-Regular'>筑紫B丸ゴシック</option>
+                        <option data-os='mac' value='Osaka'>Osaka
+                        <option data-os='mac' value='Yu Gothic'>游ゴシック</option>
+                        <option data-os='mac' value='Yu Mincho'>游明朝体</option>
+                        <option data-os='mac' value='YuMincho +36p Kana'>游明朝体+36ポかな</option>
+                        <option data-os='mac' value='Hannotate SC'>Hannotate SC</option>
+                        <option data-os='mac' value='Hannotate TC'>Hannotate TC</option>
+                        <option data-os='mac' value='HanziPen SC'>HanziPen SC
+                        <option data-os='mac' value='HanziPen TC'>HanziPen TC
+                        <option data-os='mac' value='Wawati SC'>Wawati SC</option>
+                        <option data-os='mac' value='Kaiti SC'>Kaiti SC</option>
+                        <option data-os='mac' value='Kaiti TC'>Kaiti TC</option>
+                        <option data-os='mac' value='American Typewriter'>American Typewriter</option>
+                        <option data-os='mac' value='Andale Mono'>Andale Mono
+                        <option data-os='mac' value='Arial'>Arial
+                        <option data-os='mac' value='Arial Black'>Arial Black
+                        <option data-os='mac' value='Arial Narrow'>Arial Narrow</option>
+                        <option data-os='mac' value='Arial Rounded MT Bold'>Arial Rounded MT Bold</option>
+                        <option data-os='mac' value='Arial Unicode MS'>Arial Unicode MS</option>
+                        <option data-os='mac' value='Athelas'>Athelas</option>
+                        <option data-os='mac' value='Avenir'>Avenir</option>
+                        <option data-os='mac' value='Avenir Next'>Avenir Next
+                        <option data-os='mac' value='Avenir Next Condensed'>Avenir Next Condensed</option>
+                        <option data-os='mac' value='Apple Chancery'>Apple Chancery</option>
+                        <option data-os='mac' value='Apple Symbols'>Apple Symbols</option>
+                        <option data-os='mac' value='Baskerville'>Baskerville
+                        <option data-os='mac' value='Big Caslon'>Big Caslon</option>
+                        <option data-os='mac' value='Bodoni 72'>Bodoni 72</option>
+                        <option data-os='mac' value='Bodoni 72 Oldstyle'>Bodoni 72 Oldstyle</option>
+                        <option data-os='mac' value='Bodoni 72 Smallcaps'>Bodoni 72 Smallcaps</option>
+                        <option data-os='mac' value='Bradley Hand'>Bradley Hand</option>
+                        <option data-os='mac' value='Brush Script MT'>Brush Script MT</option>
+                        <option data-os='mac' value='Chalkboard'>Chalkboard</option>
+                        <option data-os='mac' value='Chalkboard SE'>Chalkboard SE</option>
+                        <option data-os='mac' value='Chalkduster'>Chalkduster
+                        <option data-os='mac' value='Charter'>Charter</option>
+                        <option data-os='mac' value='Cochin'>Cochin</option>
+                        <option data-os='mac' value='Comic Sans MS'>Comic Sans MS</option>
+                        <option data-os='mac' value='Copperplate'>Copperplate
+                        <option data-os='mac' value='Courier'>Courier</option>
+                        <option data-os='mac' value='Courier New'>Courier New
+                        <option data-os='mac' value='Didot'>Didot
+                        <option data-os='mac' value='DIN Alternate'>DIN Alternate</option>
+                        <option data-os='mac' value='DIN Condensed'>DIN Condensed</option>
+                        <option data-os='mac' value='Futura'>Futura</option>
+                        <option data-os='mac' value='Geneva'>Geneva</option>
+                        <option data-os='mac' value='Georgia'>Georgia</option>
+                        <option data-os='mac' value='Gill Sans'>Gill Sans</option>
+                        <option data-os='mac' value='Gurmukhi MN'>Gurmukhi MN
+                        <option data-os='mac' value='Helvetica'>Helvetica</option>
+                        <option data-os='mac' value='Helvetica Neue'>Helvetica Neue</option>
+                        <option data-os='mac' value='Herculanum'>Herculanum</option>
+                        <option data-os='mac' value='HoeflerText-Regular'>HoeflerText-Regular</option>
+                        <option data-os='mac' value='HoeflerText-Black'>HoeflerText-Black
+                        <option data-os='mac' value='Impact'>Impact</option>
+                        <option data-os='mac' value='Iowan Old Style'>Iowan Old Style</option>
+                        <option data-os='mac' value='LiHei Pro'>LiHei Pro</option>
+                        <option data-os='mac' value='LiSong Pro'>LiSong Pro</option>
+                        <option data-os='mac' value='Lucida Grande'>Lucida Grande</option>
+                        <option data-os='mac' value='Luminari'>Luminari</option>
+                        <option data-os='mac' value='Marion'>Marion</option>
+                        <option data-os='mac' value='Marker Felt'>Marker Felt
+                        <option data-os='mac' value='Menlo'>Menlo
+                        <option data-os='mac' value='Microsoft Sans Serif'>Microsoft Sans Serif</option>
+                        <option data-os='mac' value='Monaco'>Monaco</option>
+                        <option data-os='mac' value='Noteworthy'>Noteworthy</option>
+                        <option data-os='mac' value='Optima'>Optima</option>
+                        <option data-os='mac' value='Palatino'>Palatino</option>
+                        <option data-os='mac' value='Papyrus'>Papyrus</option>
+                        <option data-os='mac' value='Papyrus-Condensed'>Papyrus-Condensed
+                        <option data-os='mac' value='Phosphate'>Phosphate</option>
+                        <option data-os='mac' value='Phosphate-Solid'>Phosphate-Solid</option>
+                        <option data-os='mac' value='Plantagenet Cherokee'>Plantagenet Cherokee</option>
+                        <option data-os='mac' value='PT Mono'>PT Mono</option>
+                        <option data-os='mac' value='PT Sans'>PT Sans</option>
+                        <option data-os='mac' value='PT Sans Caption'>PT Sans Caption</option>
+                        <option data-os='mac' value='PT Sans Narrow'>PT Sans Narrow</option>
+                        <option data-os='mac' value='PT Serif'>PT Serif</option>
+                        <option data-os='mac' value='PT Serif Caption'>PT Serif Caption</option>
+                        <option data-os='mac' value='BlinkMacSystemFont'>San Fransisco</option>
+                        <option data-os='mac' value='Savoye LET'>Savoye LET</option>
+                        <option data-os='mac' value='Seravek'>Seravek</option>
+                        <option data-os='mac' value='SignPainter'>SignPainter
+                        <option data-os='mac' value='Silom'>Silom
+                        <option data-os='mac' value='Skia'>Skia</option>
+                        <option data-os='mac' value='Skia-Regular_Black'>Skia-Regular_Black</option>
+                        <option data-os='mac' value='Skia-Regular_Condensed'>Skia-Regular_Condensed</option>
+                        <option data-os='mac' value='Snell Roundhand'>Snell Roundhand</option>
+                        <option data-os='mac' value='Superclarendon'>Superclarendon</option>
+                        <option data-os='mac' value='Tahoma'>Tahoma</option>
+                        <option data-os='mac' value='Times'>Times
+                        <option data-os='mac' value='Times New Roman'>Times New Roman</option>
+                        <option data-os='mac' value='Trattatello'>Trattatello
+                        <option data-os='mac' value='Trebuchet MS'>Trebuchet MS</option>
+                        <option data-os='mac' value='Verdana'>Verdana</option>
+                        <option data-os='mac' value='Zapfino'>Zapfino</option>
+                        <option disabled></option>
+                        <option value='iOS' disabled>----iOS---------------</option>
+                        <option data-os='ios' value='Hiragino Kaku Gothic ProN'>ヒラギノ角ゴ ProN</option>
+                        <option data-os='ios' value='Hiragino Mincho ProN'>ヒラギノ明朝 ProN</option>
+                        <option data-os='ios' value='Hiragino Sans'>ヒラギノ角ゴ</option>
+                        <option data-os='ios' value='AcademyEngravedLetPlain'>AcademyEngravedLetPlain
+                        <option data-os='ios' value='AlNile'>AlNile</option>
+                        <option data-os='ios' value='American Typewriter'>American Typewriter</option>
+                        <option data-os='ios' value='AppleColorEmoji'>AppleColorEmoji</option>
+                        <option data-os='ios' value='Arial'>Arial
+                        <option data-os='ios' value='Arial Rounded MT Bold'>Arial Rounded MT Bold</option>
+                        <option data-os='ios' value='Avenir'>Avenir</option>
+                        <option data-os='ios' value='Avenir Next'>Avenir Next
+                        <option data-os='ios' value='Avenir Next Condensed'>Avenir Next Condensed</option>
+                        <option data-os='ios' value='Baskerville'>Baskerville
+                        <option data-os='ios' value='Bodoni 72'>Bodoni 72</option>
+                        <option data-os='ios' value='Bodoni 72 Oldstyle'>Bodoni 72 Oldstyle</option>
+                        <option data-os='ios' value='Bodoni 72 Smallcaps'>Bodoni 72 Smallcaps</option>
+                        <option data-os='ios' value='Bradley Hand'>Bradley Hand</option>
+                        <option data-os='ios' value='Chalkboard SE'>Chalkboard SE</option>
+                        <option data-os='ios' value='Chalkduster'>Chalkduster
+                        <option data-os='ios' value='Cochin'>Cochin</option>
+                        <option data-os='ios' value='Copperplate'>Copperplate
+                        <option data-os='ios' value='Courier'>Courier</option>
+                        <option data-os='ios' value='Courier New'>Courier New
+                        <option data-os='ios' value='DIN Alternate'>DIN Alternate</option>
+                        <option data-os='ios' value='DIN Condensed'>DIN Condensed</option>
+                        <option data-os='ios' value='Didot'>Didot
+                        <option data-os='ios' value='EuphemiaUCAS'>EuphemiaUCAS</option>
+                        <option data-os='ios' value='Futura'>Futura</option>
+                        <option data-os='ios' value='Georgia'>Georgia</option>
+                        <option data-os='ios' value='Gill Sans'>Gill Sans</option>
+                        <option data-os='ios' value='Gurmukhi MN'>Gurmukhi MN
+                        <option data-os='ios' value='Helvetica'>Helvetica</option>
+                        <option data-os='ios' value='Helvetica Neue'>Helvetica Neue</option>
+                        <option data-os='ios' value='HoeflerText-Regular'>HoeflerText-Regular</option>
+                        <option data-os='ios' value='Iowan Old Style'>Iowan Old Style</option>
+                        <option data-os='ios' value='Marion'>Marion</option>
+                        <option data-os='ios' value='Marker Felt'>Marker Felt
+                        <option data-os='ios' value='Menlo'>Menlo
+                        <option data-os='ios' value='Noteworthy'>Noteworthy</option>
+                        <option data-os='ios' value='Optima'>Optima</option>
+                        <option data-os='ios' value='Palatino'>Palatino</option>
+                        <option data-os='ios' value='Papyrus'>Papyrus</option>
+                        <option data-os='ios' value='Party LET'>Party LET</option>
+                        <option data-os='ios' value='BlinkMacSystemFont'>San Fransisco</option>
+                        <option data-os='ios' value='Savoye LET'>Savoye LET</option>
+                        <option data-os='ios' value='Snell Roundhand'>Snell Roundhand</option>
+                        <option data-os='ios' value='Superclarendon'>Superclarendon</option>
+                        <option data-os='ios' value='Symbol'>Symbol</option>
+                        <option data-os='ios' value='Times New Roman'>Times New Roman</option>
+                        <option data-os='ios' value='Trebuchet MS'>Trebuchet MS</option>
+                        <option data-os='ios' value='Verdana'>Verdana</option>
+                        <option data-os='ios' value='Zapfino'>Zapfino</option>
+                    </select>
+                </div>
+
+                <!----------------------------------------------------------------->
+
+                <div>
+                    <label>装飾</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="bold_enable" id="bold_enable">
+                    <label for="bold_enable">太字</label>
+                    <br>
+                    <input type="checkbox" name="italic_enable" id="italic_enable">
+                    <label for="italic_enable">斜体</label>
+                </div>
+
+                <!----------------------------------------------------------------->
+
+                <div>
+                    <input type="checkbox" name="body_color_enable" id="body_color_enable" checked>
+                    <label for="body_color_enable">文字の色</label>
+                </div>
+
+                <div>
+                    <input type="color" id="body_color">
+                </div>
+
+                <!----------------------------------------------------------------->
+
+                <div>
+                    <input type="checkbox" name="edge_enable" id="edge_enable">
+                    <label for="edge_enable">文字の輪郭</label>
+                </div>
+
+                <div>
+                    色：<input type="color" id="edge_color">
+                    <br>
+                    太さ：<input type="number" id="edge_width" min="0" value="1">px
+                </div>
+
+                <!----------------------------------------------------------------->
+
+                <div>
+                    <input type="checkbox" name="background_color_enable" id="background_color_enable">
+                    <label for="background_color_enable">背景色</label>
+                </div>
+
+                <div>
+                    <input type="color" id="background_color">
+                </div>
+
+                <!----------------------------------------------------------------->
+
+                <div>
+                    <label>余白</label>
+                </div>
+
+                <div>
+                    上：<input type="number" id="padding_top" min="0">px
+                    <br>
+                    右：<input type="number" id="padding_right" min="0">px
+                    <br>
+                    左：<input type="number" id="padding_left" min="0">px
+                    <br>
+                    下：<input type="number" id="padding_bottom" min="0">px
+                </div>
+
+                <!----------------------------------------------------------------->
+
             </div>
-
-            <div>
-                <input type="checkbox" name="bold_enable" id="bold_enable">
-                <label for="bold_enable">太字</label>
-                <br>
-                <input type="checkbox" name="italic_enable" id="italic_enable">
-                <label for="italic_enable">斜体</label>
-            </div>
-
-            <!----------------------------------------------------------------->
-
-            <div>
-                <input type="checkbox" name="body_color_enable" id="body_color_enable" checked>
-                <label for="body_color_enable">文字の色</label>
-            </div>
-
-            <div>
-                <input type="color" id="body_color">
-            </div>
-
-            <!----------------------------------------------------------------->
-
-            <div>
-                <input type="checkbox" name="edge_enable" id="edge_enable">
-                <label for="edge_enable">文字の輪郭</label>
-            </div>
-
-            <div>
-                色：<input type="color" id="edge_color">
-                <br>
-                太さ：<input type="number" id="edge_width">px
-            </div>
-
-            <!----------------------------------------------------------------->
-
-            <div>
-                <input type="checkbox" name="background_color_enable" id="background_color_enable">
-                <label for="background_color_enable">背景色</label>
-            </div>
-
-            <div>
-                <input type="color" id="background_color">
-            </div>
-
-            <!----------------------------------------------------------------->
-
-            <div>
-                <label>余白</label>
-            </div>
-
-            <div>
-                上：<input type="number" id="padding_top">px
-                <br>
-                右：<input type="number" id="padding_right">px
-                <br>
-                左：<input type="number" id="padding_left">px
-                <br>
-                下：<input type="number" id="padding_bottom">px
-            </div>
-
-            <!----------------------------------------------------------------->
 
         </div>
 
+        <!-- <script type="module" src="./html-to-image"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/html-to-image@latest/dist/html-to-image.js"></script>
         <script src="./index.js"></script>
+
     </body>
 </html>
